@@ -7,6 +7,6 @@ COPY appkettle/*  /opt/
 # --port 6002 [KETTLE IP] [IMEI] 
 # --mqtt [MQTT BROKER HOST] [MQTT BROKER PORT]
 
-CMD ["/opt/appkettle_mqtt.py", "--port", $KETTLE_IP, $IMEI, "--mqtt", $MQTT_BROKER, $MQTT_PORT]
+CMD ["/usr/bin/python3", "/opt/appkettle_mqtt.py", "--port", $KETTLE_IP, $IMEI, "--mqtt", $MQTT_BROKER, $MQTT_PORT]
 ENTRYPOINT ["python3"]
   
